@@ -25,4 +25,8 @@ export class StudentService {
     async updateStudent(id: string, data: Partial<Student>): Promise<Student | null> {
         return this.studentModel.findByIdAndUpdate(id, data, {new: true}).exec();
     }
+
+    async patchStudent(id: string, data: Partial<Student>): Promise<Student | null> {
+        return this.studentModel.findByIdAndUpdate(id, data, {new: true}).exec();
+    }
 }
